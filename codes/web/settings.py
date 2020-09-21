@@ -26,7 +26,7 @@ SECRET_KEY = 'z@g8x(zh990d)ti@6)^a7ng2=t21_)dkwfs4n50d#(v@dy@f=r'
 DEBUG = True
 
 ALLOWED_HOSTS = ['grouptext-django.dreamstate-4-all.org',
-                 'localhost']
+                 '*']
 
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -45,6 +45,11 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+TWILIO = {
+    'TWILIO_ACCOUNT_SID': 'AC8c34b4a961b611a3606f55a0e182ad72',
+    'TWILIO_AUTH_TOKEN': '499804103c166c29432369a46272ddb6',
+    'TWILIO_NUMBER': '(510) 288-5469',
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

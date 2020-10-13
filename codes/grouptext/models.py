@@ -18,3 +18,12 @@ class TextQuestion(models.Model):
     question = models.CharField(max_length=64)
     created_at = models.DateTimeField(auto_now_add=True)
     sent = models.BooleanField(default=False)
+
+
+class TextMessage(models.Model):
+    message = models.CharField(max_length=64)
+    dest_phone = models.CharField(max_length=64)
+    src_phone = models.CharField(max_length=64)
+    message_id = models.CharField(max_length=120)
+    message_status = models.CharField(max_length=64)
+    created_at = models.DateTimeField(auto_now_add=True)

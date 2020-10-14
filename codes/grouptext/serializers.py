@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TextGroup, TextGroupMember, TextQuestion
+from .models import TextGroup, TextGroupMember, TextQuestion, TextMessage
 
 
 class TextGroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -9,7 +9,6 @@ class TextGroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class TextGroupMemberSerializer(serializers.HyperlinkedModelSerializer):
-
     textgroup = TextGroupSerializer(read_only=True)
 
     class Meta:
@@ -21,3 +20,11 @@ class TextQuestionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = TextQuestion
         fields = ('id', 'text_group', 'question', 'created_at')
+
+
+class TextMessageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TextMessage
+        fields = ('message', 'dest_phone', 'src_phone', 'created_at')
+
+

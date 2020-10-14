@@ -9,3 +9,4 @@ venv
 *.sv?
 agent_data.csv
 *.csv
+.idea/

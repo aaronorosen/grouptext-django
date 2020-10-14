@@ -45,6 +45,13 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ]
+}
+
+
 TWILIO = {
     'TWILIO_ACCOUNT_SID': '',
     'TWILIO_AUTH_TOKEN': '',
